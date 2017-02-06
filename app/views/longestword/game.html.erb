@@ -1,0 +1,26 @@
+<div style="text-align: center">
+
+<h1>Welcome to the Longest Word game ! </h1>
+
+<p>The letters are the following :</p>
+
+<% @array.each do |letter| %>
+  <span style="border:1px" > <%= letter %> </span>
+<% end %>
+<br></br>
+
+
+<form action="/score">
+<label for="array"></label>
+<input type="text" id="array" name="proposal" placeholder="what is your longest word?">
+<input type="hidden" name="array" value= "<%= @array.join %>" >
+<input type="hidden" name="start_time" value= "<%= @start_time %>" >
+<input type="hidden" name="end_time" value= "<%= @end_time %>" >
+<input type="submit" value="Submit!">
+</form>
+
+</div>
+
+
+
+
